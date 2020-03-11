@@ -31,7 +31,8 @@ module ScimRails
     private
 
     def validate_numericality(input)
-      raise unless input.match?(/\A\d+\z/)
+      test = input =~ /\A\d+\z/
+      raise unless test != nil
     end
 
   end
